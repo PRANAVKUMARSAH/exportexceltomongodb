@@ -23,7 +23,7 @@ const FileUpload = () => {
     formData.append('file', selectedFile);
 
     try {
-      const response = await axios.post('http://localhost:8000/file/upload', formData, {
+      const response = await axios.post('https://github.com/PRANAVKUMARSAH/exportexceltomongodb/file/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
