@@ -11,7 +11,7 @@ const Candidate = require('./models/candidateModel');
 const candidateControllers = require('./controllers/candidateController');
 const routerController = require('./controllers/candidateController');
 
-console.log("candidateController", candidateControllers); 
+
 
 // Create express app
 const app = express();
