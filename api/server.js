@@ -17,19 +17,7 @@ const routerController = require('./controllers/candidateController');
 const app = express();
 app.use(cors())
 
-// Enable CORS for all routes
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*'); // Replace '*' with the specific origin you want to allow
-  res.header(
-      'Access-Control-Allow-Headers',
-      'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-  );
-  if (req.method === 'OPTIONS') {
-      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
-      return res.status(200).json({});
-  }
-  next();
-});
+
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
